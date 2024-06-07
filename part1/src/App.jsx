@@ -30,24 +30,26 @@ const App = () => {
 
   const Content = ()=> {
     return parts.map(part =>
-      // <><p>{part.name} {part.exercises}</p></>
       <p>{part.name} {part.exercises}</p>
   );
 }
-  // return <>{Content}</>
 
-//   const Content = parts.map(part =>{
-//     // <><p>{part.name} {part.exercises}</p></>
-//     <p>{part.name} {part.exercises}</p>
-// return <>{Content}</>
-// });
+  const Total = ()=> {
+    console.log(parts[0].exercises)
+    return(
+      <>
+    <div> Total number of exercises: {parts[0].exercises+parts[1].exercises+parts[2].exercises}</div>
+    </>
+    )
+  }
+
 
 
   return (
     <div>
       < Header course={course}/>
-      <Content />
-      {/* < Total parts/> */}
+      <Content parts= {parts}/>
+      <Total parts= {parts}/>
     </div>
   )
 }
