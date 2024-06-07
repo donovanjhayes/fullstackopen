@@ -16,6 +16,7 @@ const App = () => {
   ]
 
 
+
   const Header = () => {
     return (
       <>
@@ -26,26 +27,27 @@ const App = () => {
     )
   }
 
-//   const listItems = people.map(person =>
-//     <li>{person}</li>
-//   );
-//   return <ul>{listItems}</ul>;
-// }
-  const Content = parts.map(part =>
-      <><p>{part.name} {part.exercises}</p></>
-    )
-    return Content;
-    
 
+  const Content = ()=> {
+    return parts.map(part =>
+      // <><p>{part.name} {part.exercises}</p></>
+      <p>{part.name} {part.exercises}</p>
+  );
+}
+  // return <>{Content}</>
 
+//   const Content = parts.map(part =>{
+//     // <><p>{part.name} {part.exercises}</p></>
+//     <p>{part.name} {part.exercises}</p>
+// return <>{Content}</>
+// });
 
 
   return (
     <div>
       < Header course={course}/>
-      {/* <Content /> */}
+      <Content />
       {/* < Total parts/> */}
-      <p>don't forget to uncomment</p>
     </div>
   )
 }
